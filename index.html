@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rubric for Spring 2018 Design Challenge</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#checklist" ).draggable({ scroll: false });
+        } );
+  </script>
+</head>
+
+<body>
+    
+    <div class="grid-container">
+        <!-- header row -->
+        <div class="grid-item grid-corner"></div>
+        <div class="grid-item grid-header">Master<br><span class="scorereference">4 -- 100%</span></div>
+        <div class="grid-item grid-header">Professional<br><span class="scorereference">3 -- 85%</span></div>
+        <div class="grid-item grid-header">Apprentice<br><span class="scorereference">2 -- 70%</span></div>
+        <div class="grid-item grid-header">Novice<br><span class="scorereference">1 -- 55%</span></div>
+        <div class="grid-item grid-header">No Attempt<span class="scorereference"><br>0 -- 45%</span></div>
+
+        <!-- row 1 -->
+        <div class="grid-item">
+            My work meets the specifications requested because I...
+        </div>
+        <div class="grid-item">... included all features indicated on this worksheet's checklist.</div>
+        <div class="grid-item">... included most (missing 1-2) features on the worksheet.</div>
+        <div class="grid-item">... included some (missing 3-4) features on the worksheet.</div>
+        <div class="grid-item">... included only a few or none of the features on the worksheet.</div>
+        <div class="grid-item">No attempt</div>
+
+        <!-- row 2 -->
+        <div class="grid-item">
+
+            My work was organized because I...
+
+        </div>
+        <div class="grid-item">
+            ... used hierarchical design (more important elements first) and left appropriate amounts of spacing between elements. The overall organization suggests an understanding of good composition.
+        </div>
+        <div class="grid-item">
+            ... used hierarchical design (more important elements first) and left appropriate amount of spacing between elements. However, there may be some unusual placement of elements.
+        </div>
+        <div class="grid-item">... occasionally did not follow hierarchical design because some important elements were small or near the bottom of the page, or unimportant elements were promoted. There may be some issues with too much or too little spacing.
+        </div>
+        <div class="grid-item">... lacked an overall sense of composition because elements were placed mostly randomly without concern for hierarchical design. Spacing is very inconsistent or appears random.
+        </div>
+        <div class="grid-item">No attempt</div>
+
+        <!-- row 3 -->
+        <div class="grid-item">
+
+            My work followed principles of good color usage because I...
+
+        </div>
+        <div class="grid-item">
+
+            ... picked a color scheme that goes together well visually. I utilized the color wheel when creating my palette. The colors do not affect readability of the text and enhance the overall design.
+        </div>
+        <div class="grid-item">
+
+            ... picked a color scheme that is appropriate for the website. I utilized the color wheel when creating my color palette. The colors do not affect readability of the text.
+        </div>
+        <div class="grid-item">
+            ... picked a color scheme that has one or more colors that do not mix well in a palette. Color choices are jarring and do not synergize well together. The colors may affect the readability of the text.
+
+        </div>
+        <div class="grid-item">
+            ... picked a color scheme that is incomplete or does not fit well together. It is obvious that colors are missing in certain parts of my design. Text is almost impossible to read.
+
+        </div>
+        <div class="grid-item">No attempt</div>
+
+        <!-- row 4 -->
+        <div class="grid-item">
+
+            My transition or animation is well designed because...
+
+        </div>
+        <div class="grid-item">
+            ... they add visual feedback without being too distracting, and visually they look appealing (good color choices, creative tie-in with the webpage, etc.)
+        </div>
+        <div class="grid-item">
+            ... they add visual feedback without being too distracting.
+        </div>
+        <div class="grid-item">
+            ... they add visual feedback but are somewhat awkward, distracting, are difficult to click, or move other elements on the page.
+        </div>
+        <div class="grid-item">
+            ... they don't look good because they don't function properly.
+        </div>
+        <div class="grid-item">No attempt</div>
+
+        <!-- row 5 -->
+        <div class="grid-item">
+
+            My Javascript component is interactive because...
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input and changes some element on the page. The addition is creative and enhances the user's experience by adding a fun element to the page.
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input and changes some element on the page, and that element is related to Spanish review.
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input and changes some element on the page, but that change has nothing to do with Spanish review.
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input (an event triggers) but doesn't change what is happening on the webpage.
+
+        </div>
+        <div class="grid-item">No attempt</div>
+
+        <!-- row 5 -->
+        <div class="grid-item">
+
+            My API calls are done properly because...
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input and changes some element on the page. The addition is creative and enhances the user's experience by adding a fun element to the page.
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input and changes some element on the page, and that element is related to Spanish review.
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input and changes some element on the page, but that change has nothing to do with Spanish review.
+
+        </div>
+        <div class="grid-item">
+
+            ... it responds to user input (an event triggers) but doesn't change what is happening on the webpage.
+
+        </div>
+        <div class="grid-item">No attempt</div>
+        
+        <div class="grid-item grid-full-width">Backend Only</div>
+        
+        <!-- row 5 -->
+        <div class="grid-item">
+
+            My input/output is well designed because it...
+
+        </div>
+        <div class="grid-item">
+
+            ... generates different responses depending on user input and creates a fun, engaging experience for users.
+
+        </div>
+        <div class="grid-item">
+
+            ... generates different responses depending on what the user types in. However, the input and output exchanged does not create a fun, engaging experience for users.
+
+        </div>
+        <div class="grid-item">
+
+            ... gives the same response regardless of what the user types in.
+
+        </div>
+        <div class="grid-item">
+
+            ... ignores both concerns.
+
+        </div>
+        <div class="grid-item">No attempt</div>
+        
+        
+        
+    </div>
+
+    <div id="checklist">
+        <h3>Features Checklist</h3>
+        <ul>
+            <li>Two HTML files that link to each other</li>
+            <li>A Bootstrap template</li>
+            <li>At least 5 images for each unit's page</li>
+            <li>Bold, italics, and heading tags</li>
+            <li>A list or a table</li>
+            <li>A different color scheme for each unit's page</li>
+            <li>Structure that is organized and uses hierarchy (important elements are larger)</li>
+        </ul>
+    </div>
+</body>
+
+</html>
