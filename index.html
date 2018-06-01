@@ -2,13 +2,17 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Rubric for Spring 2018 Design Challenge</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $( function() {
-            $( "#checklist" ).draggable({ scroll: false });
+            $(".checklist").draggable().resizable().tabs({
+                collapsible: true
+                })
+            
         } );
   </script>
 </head>
@@ -186,17 +190,39 @@
         
     </div>
 
-    <div id="checklist">
-        <h3>Features Checklist</h3>
+    <div id="tabs" class="checklist">
         <ul>
-            <li>Two HTML files that link to each other</li>
-            <li>A Bootstrap template</li>
-            <li>At least 5 images for each unit's page</li>
-            <li>Bold, italics, and heading tags</li>
-            <li>A list or a table</li>
-            <li>A different color scheme for each unit's page</li>
-            <li>Structure that is organized and uses hierarchy (important elements are larger)</li>
+            <li><a href="#tabs-1">General Checklist</a></li>
+            <li><a href="#tabs-2">FrontEnd</a></li>
+            <li><a href="#tabs-3">BackEnd</a></li>
         </ul>
+        <div id="tabs-1">
+            <h3>General Checklist</h3>
+            <ul>
+                <li>Two HTML files that link to each other</li>
+                <li>A Bootstrap template</li>
+                <li>At least 5 images for each unit's page</li>
+                <li>Bold, italics, and heading tags</li>
+                <li>A list or a table</li>
+                <li>A different color scheme for each unit's page</li>
+                <li>Structure that is organized and uses hierarchy (important elements are larger)</li>
+            </ul>
+        </div>
+        <div id="tabs-2">
+            <h4>FrontEnd</h4>
+            <ul>
+                <li>On at least one page, an animation on at least one page that's relevant to the unit</li>
+                <li>On at least one page, something that utilizes a JavaScript event (a small quiz game for instance, a button that responds to a click, a review game where you have to click the right card, etc.)</li>
+            </ul>
+        </div>
+        <div id="tabs-3">
+            <h4>BackEnd</h4>
+            <ul>
+                <li>A transition on at least one page that's not distracting/enhances the page in some way</li>
+                <li>On at least one page, a page that takes in user input and provides output</li>
+                <li>On at least one page, an API call that displays information on the page</li>
+            </ul>
+        </div>
     </div>
 </body>
 
