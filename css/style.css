@@ -89,3 +89,7 @@ body {
 .ui-state-active {
     background-color:#5cd65c !important;
 }
+
+.clicked {
+    transform: scale(1.1);
+}

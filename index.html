@@ -10,18 +10,22 @@
 	</script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
 	</script>
-	<script>
+    <script>
 	       $( function() {
 	           $(".checklist").draggable().tabs({
 	               collapsible: true,
 	               hide: { effect: "fade", duration: 250, direction: "up" }
-	               })
-	           
-	       } );
+	           });
+	               
+	            $("div.grid-item:not('.grid-header,.grid-row-start')").on("click", function() {
+	                $(this).toggleClass("clicked",500);
+	            })
+	       });
 	</script>
 </head>
 
 <body>
+    
 	<div class="grid-container">
 		<!-- header row -->
 
@@ -357,5 +361,7 @@
 			</ul>
 		</div>
 	</div>
+	
+		
 </body>
 </html>
