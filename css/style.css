@@ -1,85 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
-
 body {
-    background-color:#EEEEEE;
-    overflow:auto;
+	background-color: #EEEEEE;
+	overflow: auto;
 }
 
 .checklist {
-    position:fixed;
-    width:400px;
-    right:0px;
-    border: groove 5px black;
-    background-color:white;
-    font-family: 'Roboto';
-    padding:2px 10px 10px 10px;
-    box-shadow: 8px 5px 5px grey;
-    cursor:all-scroll;
-
+	position: fixed;
+	width: 400px;
+	right: 0px;
+	border: groove 5px black;
+	background-color: white;
+	font-family: 'Roboto';
+	padding: 2px 10px 10px 10px;
+	box-shadow: 8px 5px 5px grey;
+	cursor: all-scroll;
 }
 
-.ui-tabs .ui-tabs-nav li {    
-    margin: 1px 0 0 0 !important;
+.ui-tabs .ui-tabs-nav li {
+	margin: 1px 0 0 0 !important;
 }
 
 .grid-container {
-    display:grid;
-    position:absolute;
-    grid-template-columns: 150px auto auto auto auto auto;
-    grid-template-rows: auto auto auto;
-    grid-gap: 0px;
-
+	display: grid;
+	position: absolute;
+	grid-template-columns: 150px auto auto auto auto auto;
+	grid-template-rows: auto;
+	grid-gap: 2px;
 }
 
 .grid-item {
-    border: solid 2px black;
-    text-align:center;
-    
-    font-family: 'Roboto';
-
-    background-color:white;
-    padding:10px;
-    font-size:20px;
-    border-radius:10px;
+	border: solid 2px black;
+	text-align: center;
+	font-family: 'Roboto';
+	background-color: white;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
 }
 
 .grid-header {
-    align-content: center;
-    font-size: 25px;
-    font-family: 'Roboto Condensed';
-    padding:5px;
+	align-content: center;
+	font-size: 25px;
+	font-family: 'Roboto Condensed';
+	padding: 5px;
+	border: solid 4px black;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.grid-row-start {
     border: solid 4px black;
-    font-weight:bold;
-    padding:10px;
 }
 
 .grid-corner {
-    border:none;
-    background-color:inherit;
+	border: none;
+	background-color: inherit;
 }
 
 .grid-full-width {
-     grid-column: 1 / 7;
+	grid-column: 1 / 7;
 }
 
 .four {
- 
+    background-color:#b3ffb3;
 }
 
 .three {
-    
+    background-color: #ffe0b3
 }
 
 .two {
-    
+    background-color: #ffffb3;
 }
 
 .one {
-    background-color:#c20144;
+	background-color: #ffb3b3;
 }
 
 .scorereference {
-    
-    font-size:20px;
-    
+	font-size: 20px;
 }
