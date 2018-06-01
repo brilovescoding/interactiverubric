@@ -19,6 +19,18 @@
 	               
 	            $("div.grid-item:not('.grid-header,.grid-row-start')").on("click", function() {
 	                $(this).toggleClass("clicked",500);
+	                
+	                var numFours = $(".four.clicked").length
+	                var numThrees = $(".three.clicked").length
+	                var numTwos = $(".two.clicked").length
+	                var numOnes = $(".one.clicked").length
+	                var numZeroes = $(".zero.clicked").length
+	                var total = numFours + numThrees + numTwos + numOnes + numZeroes;
+	                
+	                var average = ((numFours*100) + (numThrees * 85) + (numTwos * 70) + (numOnes * 55))/total
+	                
+	                $("#score").text(average)
+	                
 	            })
 	       });
 	</script>
@@ -31,6 +43,7 @@
 
 
 		<div class="grid-item grid-corner">
+		    <h1 id="score"></h1>
 		</div>
 
 
