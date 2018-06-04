@@ -3,6 +3,11 @@
 
 <head>
     <title>Interactive Rubric!</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    
+    <!-- keep UTF-8 charset here so emojis work  -->
+    <meta charset="UTF-8">
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -76,17 +81,17 @@
               <a class="choice btn-large waves-effect waves-light pink lighten-2 pulse">See the Rubric!</a>
             </div>
         </div>
-        <div class="section row-1">
+        <div class="section row-1 graded">
             <h1>Row 1: The Checklist</h1>
             <h4>Let's start with the checklist. How many items did you complete?</h4>
             <div class="row center choicelist">
                 <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>All of them!</h4></div>
-                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 1-2</h4></div>
-                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 3-4</h4></div>
-                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing more than 4</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 1-2.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 3-4.</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing more than 4.</h4></div>
             </div>
         </div>
-        <div class="section row-2">
+        <div class="section row-2 graded">
         
             <h1>Row 2: Organization and Hierarchy</h1>
             <h4>Are your pages visually organized? Are the spacing and sizing of elements consistent?</h4>
@@ -98,27 +103,73 @@
             </div>
         
         </div>
-        <div class="section row-3">
+        <div class="section row-3 graded">
             <h1>Row 3: Color Usage</h1>
-            <h4>Did you consider the color wheel when developing a color scheme? Do the colors match/enhance the page's theme, and are they readable?</h4>
+            <div class="row">
+                <div class="col s9"><h4>Did you consider the color wheel when developing a color scheme? Do the colors match/enhance the page's theme, and are they readable?</h4></div>
+                <div class="col s3"><img src="colorwheel.png" width="150px"></div>
+            </div>
+            <span style="clear:both;"
             <div class="row center choicelist">
-                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my work shows attention to detail and composition!</h4></div>
-                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but a few elements could be placed better.</h4></div>
-                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>Sometimes, but my spacing is really inconsistent. Some important elements are small or low on the page.</h4></div>
-                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, I used the color wheel and picked 3 or 4 matching colors. Very readable, and it enhances the overall design!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, I used the color wheel and picked 2-3 colors. They're OK.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I didn't, so my color choices are jarring, don't fit the page well, or make it hard to read.</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to color choices at all. I may have even forgotten to add colors! It's all pretty random!</h4></div>
             </div>
         </div>
-        <div class="section row-4">
+        <div class="section row-4 graded">
             <h1>Row 4: Transition or Animation</h1>
             <h4>Front-end needs an animation; back-end needs a transition. Does it look appealing? Is it not too distracting?</h4>
             <div class="row center choicelist">
-                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my work shows attention to detail and composition!</h4></div>
-                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but a few elements could be placed better.</h4></div>
-                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>Sometimes, but my spacing is really inconsistent. Some important elements are small or low on the page.</h4></div>
-                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>It looks appealing, it's not distracting, and really enhances the overall design!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>It's a little distracting or awkward (strange or surprising movement), but it works overall.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>My animation works, but it's very distracting. It might even move other page elements around, or cover up important things!</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>My animation or transition isn't there or doesn't work! 😧</h4></div>
             </div>
-        </div>        
+        </div>
+        <div class="section row-5 decision">
+            <h1>Front-End or Back-End?</h1>
+            <h4>The rubric is different for front-end or back-end students. Which did you and your partner pick?</h4>
+            <div class="row center choicelist">
+                <div class="choice front-end-choice blue lighten-1 z-depth-2 waves-effect"><h4>Front-End and Front-End</h4></div>
+                <div class="choice back-end-choice blue lighten-1 z-depth-2 waves-effect"><h4>Front-End and Back-End</h4></div>
+                
+            </div>
+        </div>
+        <div class="section row-6 front-end graded">
+            <h1>Front-End JavaScript Component</h1>
+            <h4>The rubric asks you to make a simple JavaScript artifact (a clicker game, for instance). Does it respond to user input and change something on the page? Does it help with Spanish review?</h4>
+            <div class="row center choicelist">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes to all of the above -- and it's fun too!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes to all of the above!</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>It might change something on the page, but it has nothing to do with Spanish review.</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I left it out, or it didn't work!</h4></div>
+            </div>
+        </div>
+        <div class="section row-7 back-end graded">
+            <h1>Back-End API Call</h1>
+            <h4>The rubric asks you to make an API call, and respond to user input/output. Didya do it?</h4>
+            <div class="row center choicelist">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my output is different based on user input. It's fun, helps with Spanish review, and my API call works!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but the output is always the same. It might be somewhat helpful for Spanish review. And my API call works!</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I've got the output, but I forgot to incorporate the API call!</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I left this part out, or it didn't work!</h4></div>
+            </div>
+        </div>
     </div>
+    
+    <!-- modal triggers on jquery call -->
+     <div id="modal1" class="modal" style="padding:20px;">
+        <div class="modal-content">
+          <h4>Rubric Done!</h4>
+          <h6>Great job! Self-assessment is important to your growth as a programmer. </h6>
+          <img src="rubberduck.png" width="150px" style="float:right" />
+          <h5>You scored <span class="final-score">X</span>!</h5>
+        </div>
+        <div class="modal-footer">
+          <a href="#row-0" class="modal-close waves-effect waves-green btn-flat">Start Over!</a>
+        </div>
+      </div>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
@@ -131,42 +182,93 @@
             $(document).ready(function() {
                 $('.collapsible').collapsible();
             });
-
+                $('.modal').modal();
                 var averageSum = 0;
                 var averageDivisor = 0;
-            
+                
+                $('.modal-close').click(function() {
+                    averageSum = 0;
+                    averageDivisor = 0;
+                    $('.grade-value').html(averageSum / averageDivisor);
+                    $disabledlist = $(document).find('.disabled')
+                    $disabledlist.removeClass('disabled')
+                    $(window).scrollTo($(".row-0"), 800, {
+                            margin: true
+                    });
+                })
+                
                 $('.choice').click(function() {
                     
-                    if ($(this).hasClass('four')) {
-                        averageSum += 100;
-                        averageDivisor++;
-                    }
-                    
-                    else if ($(this).hasClass('three')) {
-                        averageSum += 85;
-                        averageDivisor++;
-                    }
-                    
-                    else if ($(this).hasClass('two')) {
-                        averageSum += 70;
-                        averageDivisor++;
-                    }
-                    
-                    else if ($(this).hasClass('one')) {
-                        averageSum += 55;
-                        averageDivisor++;
-                    }
-                    
-                    
+                        if (!$(this).hasClass('disabled')) {
+                            if ($(this).hasClass('four')) {
+                                averageSum += 100;
+                                averageDivisor++;
+                                $(this).addClass("disabled")
+                                $(this).siblings().addClass("disabled")
+                            }
+                            
+                            else if ($(this).hasClass('three')) {
+                                averageSum += 85;
+                                averageDivisor++;
+                                $(this).addClass("disabled")
+                                $(this).siblings().addClass("disabled")                            
+                                
+                            }
+                            
+                            else if ($(this).hasClass('two')) {
+                                averageSum += 70;
+                                averageDivisor++;
+                                $(this).addClass("disabled")
+                                $(this).siblings().addClass("disabled")
+                            }
+                            
+                            else if ($(this).hasClass('one')) {
+                                averageSum += 55;
+                                averageDivisor++;
+                                $(this).addClass("disabled")
+                                $(this).siblings().addClass("disabled")
+
+                            }
+                        }
+                        
+                        
+                        
                     if (averageSum != 0 && averageDivisor != 0) {
                         console.log("Trying to post value")
                         $('.grade-value').html(averageSum / averageDivisor);
                     }
-                    var $next = $(this).parents('.section').next();
+                    
+                    var $thisparent = $(this).parents('.section')
+                    console.log($thisparent)
+                    var $next = undefined;
+                    console.log($thisparent.next())
+                    if ($thisparent.hasClass('front-end') || $(this).hasClass('front-end-choice')) {
+                        
+                        $next = $thisparent.nextAll('.front-end:first')
+                        
+                    }
+                    
+                    else if ($thisparent.hasClass('back-end') || $(this).hasClass('back-end-choice')) {
+                        $next = $thisparent.nextAll('.back-end:first')
+                    }
+                    
+                    else {
+                        $next = $thisparent.next()
+                    }
+                     // This could be helpful later for this condition:
+                     // || divisorCount >= $('.graded').length-1
+                    if ($next.length == 0) {
+                        
+                        $('.modal').modal('open');
 
-                    $(window).scrollTo($next, 800, {
-                        margin: true
-                    });
+                        $('.final-score').html(averageSum/ averageDivisor);
+                        
+                    }
+                    else {
+                        $(window).scrollTo($next, 800, {
+                            margin: true
+                        });
+                    }
             });
         });
     </script>

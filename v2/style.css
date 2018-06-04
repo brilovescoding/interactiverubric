@@ -7,6 +7,10 @@
     color:black;
 }
 
+.disabled {
+    background-color:grey !important;
+}
+
 .grade-container {
     width:100px;
     height:100px;
@@ -52,5 +56,5 @@
     color:white;
     margin: 20px auto 20px auto;
     cursor:pointer;
-    padding: 0 0 10px 0;
+    padding: 0 10px 10px 10px;
 }
