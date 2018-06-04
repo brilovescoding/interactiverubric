@@ -18,7 +18,16 @@
 	           });
 	               
 	            $("div.grid-item:not('.grid-header,.grid-row-start')").on("click", function() {
-	                $(this).toggleClass("clicked",500);
+	                
+	                if ( !$(this).hasClass("clicked") ) {
+	                	$(this).addClass("clicked",500);
+            			$(this).animate({ transform:'scale(1.1)' },500)
+	                }
+	                else {
+	                	$(this).removeClass("clicked"),500
+            			$(this).animate({ transform:'scale(1.0)' },500)
+
+	                }
 	                
 	                var numFours = $(".four.clicked").length
 	                var numThrees = $(".three.clicked").length
@@ -29,7 +38,9 @@
 	                
 	                var average = ((numFours*100) + (numThrees * 85) + (numTwos * 70) + (numOnes * 55) + (numZeroes * 45))/total
 	                
-	                $("#score").text(average)
+	                if (!average.isNaN) {
+	                	$("#score").text(average)
+	                }
 	                
 	            })
 	       });

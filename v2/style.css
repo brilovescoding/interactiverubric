@@ -1,0 +1,47 @@
+.section:nth-child(odd){
+ 
+    background: linear-gradient(rgba(255,93,177,1) 0%, rgba(124,5,235,1) 100%);
+}
+.section:nth-child(even){
+    background: linear-gradient(to bottom, rgba(84,255,241,1) 0%, rgba(145,232,66,1) 100%);
+}
+
+.grade-container {
+    width:100px;
+    height:100px;
+    position:fixed;
+    top:0px;
+    right:0px;
+    background-color:white;
+    text-align:center;
+    border: solid 2px black;
+}
+
+.collapsible {
+    color:black;
+    background-color:white;
+}
+
+.collapsible-body>ul>li {
+    list-style-type:circle;
+}
+
+.row-0 {
+    color:white;
+}
+
+.section {
+    padding: 10px 30px 30px 30px;
+    width: 100vw;
+    min-height: 100vh;
+  display: inline-block;
+  vertical-align: top;
+    border-bottom: solid 10px black;    
+}
+
+
+.section.row-2 {
+    
+    
+   
+}
