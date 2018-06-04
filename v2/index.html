@@ -17,7 +17,7 @@
 <body>
     <div class="grade-container">
         <h5>Grade</h5>
-        <h6 class="grade-value">100</h6></div>
+        <h6 class="grade-value"></h6></div>
     <div class="wrapper">
         <div class="section row-0">
             <h1>End of Year Project</h1>
@@ -83,24 +83,41 @@
                 <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>All of them!</h4></div>
                 <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 1-2</h4></div>
                 <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 3-4</h4></div>
-                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing more than 4</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing more than 4</h4></div>
             </div>
         </div>
         <div class="section row-2">
-        <div class="section row-1">
+        
             <h1>Row 2: Organization and Hierarchy</h1>
             <h4>Are your pages visually organized? Are the spacing and sizing of elements consistent?</h4>
             <div class="row center choicelist">
                 <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my work shows attention to detail and composition!</h4></div>
                 <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but a few elements could be placed better.</h4></div>
                 <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>Sometimes, but my spacing is really inconsistent. Some important elements are small or low on the page.</h4></div>
-                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
             </div>
-        </div>
+        
         </div>
         <div class="section row-3">
-                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>All of them!</h4></div>
+            <h1>Row 3: Color Usage</h1>
+            <h4>Did you consider the color wheel when developing a color scheme? Do the colors match/enhance the page's theme, and are they readable?</h4>
+            <div class="row center choicelist">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my work shows attention to detail and composition!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but a few elements could be placed better.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>Sometimes, but my spacing is really inconsistent. Some important elements are small or low on the page.</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
+            </div>
         </div>
+        <div class="section row-4">
+            <h1>Row 4: Transition or Animation</h1>
+            <h4>Front-end needs an animation; back-end needs a transition. Does it look appealing? Is it not too distracting?</h4>
+            <div class="row center choicelist">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my work shows attention to detail and composition!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but a few elements could be placed better.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>Sometimes, but my spacing is really inconsistent. Some important elements are small or low on the page.</h4></div>
+                <div class="choice one blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
+            </div>
+        </div>        
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -115,10 +132,37 @@
                 $('.collapsible').collapsible();
             });
 
-            
+                var averageSum = 0;
+                var averageDivisor = 0;
             
                 $('.choice').click(function() {
-                   var $next = $(this).parents('.section').next();
+                    
+                    if ($(this).hasClass('four')) {
+                        averageSum += 100;
+                        averageDivisor++;
+                    }
+                    
+                    else if ($(this).hasClass('three')) {
+                        averageSum += 85;
+                        averageDivisor++;
+                    }
+                    
+                    else if ($(this).hasClass('two')) {
+                        averageSum += 70;
+                        averageDivisor++;
+                    }
+                    
+                    else if ($(this).hasClass('one')) {
+                        averageSum += 55;
+                        averageDivisor++;
+                    }
+                    
+                    
+                    if (averageSum != 0 && averageDivisor != 0) {
+                        console.log("Trying to post value")
+                        $('.grade-value').html(averageSum / averageDivisor);
+                    }
+                    var $next = $(this).parents('.section').next();
 
                     $(window).scrollTo($next, 800, {
                         margin: true
