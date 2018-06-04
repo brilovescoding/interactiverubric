@@ -1,9 +1,10 @@
 .section:nth-child(odd){
- 
+    color:white;
     background: linear-gradient(rgba(255,93,177,1) 0%, rgba(124,5,235,1) 100%);
 }
 .section:nth-child(even){
     background: linear-gradient(to bottom, rgba(84,255,241,1) 0%, rgba(145,232,66,1) 100%);
+    color:black;
 }
 
 .grade-container {
@@ -27,7 +28,6 @@
 }
 
 .row-0 {
-    color:white;
 }
 
 .section {
@@ -39,9 +39,18 @@
     border-bottom: solid 10px black;    
 }
 
+.choicelist {
+    
+    margin-top:25px;
+    
+}
 
-.section.row-2 {
-    
-    
-   
+.choice {
+    display:block;
+    min-width:25vw;
+    max-width:80vw;
+    color:white;
+    margin: 20px auto 20px auto;
+    cursor:pointer;
+    padding: 0 0 10px 0;
 }

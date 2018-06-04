@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Interactive Rubric!</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -72,14 +73,33 @@
                 </li>
             </ul>
             <div class="row center">
-              <a class="choice btn-large waves-effect waves-light pink lighten-2">See the Rubric!</a>
+              <a class="choice btn-large waves-effect waves-light pink lighten-2 pulse">See the Rubric!</a>
             </div>
         </div>
         <div class="section row-1">
-
+            <h1>Row 1: The Checklist</h1>
+            <h4>Let's start with the checklist. How many items did you complete?</h4>
+            <div class="row center choicelist">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>All of them!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 1-2</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing 3-4</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I'm missing more than 4</h4></div>
+            </div>
         </div>
         <div class="section row-2">
-
+        <div class="section row-1">
+            <h1>Row 2: Organization and Hierarchy</h1>
+            <h4>Are your pages visually organized? Are the spacing and sizing of elements consistent?</h4>
+            <div class="row center choicelist">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>Yes, and my work shows attention to detail and composition!</h4></div>
+                <div class="choice three blue lighten-1 z-depth-2 waves-effect"><h4>Yes, but a few elements could be placed better.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>Sometimes, but my spacing is really inconsistent. Some important elements are small or low on the page.</h4></div>
+                <div class="choice two blue lighten-1 z-depth-2 waves-effect"><h4>I didn't pay attention to sizing or spacing at all. It's all pretty random!</h4></div>
+            </div>
+        </div>
+        </div>
+        <div class="section row-3">
+                <div class="choice four blue lighten-1 z-depth-2 waves-effect"><h4>All of them!</h4></div>
         </div>
     </div>
     <!--JavaScript at end of body for optimized loading-->
@@ -95,11 +115,14 @@
                 $('.collapsible').collapsible();
             });
 
-            var $obj = $('.section');
-            $('.choice').click(function() {
-                $(window).scrollTo($obj.next(), 800, {
-                    margin: true
-                });
+            
+            
+                $('.choice').click(function() {
+                   var $next = $(this).parents('.section').next();
+
+                    $(window).scrollTo($next, 800, {
+                        margin: true
+                    });
             });
         });
     </script>
