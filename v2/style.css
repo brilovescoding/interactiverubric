@@ -7,9 +7,6 @@
     color:black;
 }
 
-.disabled {
-    background-color:grey !important;
-}
 
 .grade-container {
     width:100px;
@@ -17,9 +14,9 @@
     position:fixed;
     top:0px;
     right:0px;
-    background-color:white;
     text-align:center;
-    border: solid 2px black;
+    border: solid 2px white;
+    color:white;
 }
 
 .collapsible {
@@ -28,10 +25,7 @@
 }
 
 .collapsible-body>ul>li {
-    list-style-type:circle;
-}
-
-.row-0 {
+    list-style-type:square;
 }
 
 .section {
